@@ -1,0 +1,47 @@
+{
+  "name": "catrwall-apollo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-boost": "^0.1.22",
+    "express": "^4.16.4",
+    "graphql": "^14.0.2",
+    "react": "^16.6.3",
+    "react-apollo": "^2.3.2",
+    "react-dom": "^16.6.3",
+    "react-flip-move": "^3.0.3",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/graphql": "14.0.3",
+    "@types/jest": "23.3.10",
+    "@types/node": "10.12.11",
+    "@types/prop-types": "15.5.6",
+    "@types/react": "16.7.11",
+    "@types/react-dom": "16.0.11",
+    "@types/react-test-renderer": "16.0.3",
+    "apollo-codegen": "0.20.2",
+    "node-sass": "^4.10.0",
+    "react-scripts": "2.1.1",
+    "react-test-renderer": "16.6.3",
+    "typescript": "3.2.1",
+    "tslint": "^5.11.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "schema": "apollo-codegen introspect-schema http://localhost:4000/graphql --output ./src/schema.json",
+    "types": "apollo-codegen generate ./src/**/queries.ts --addTypename --schema ./src/schema.json --target typescript --output ./src/types.ts"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

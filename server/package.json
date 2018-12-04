@@ -1,0 +1,20 @@
+{
+  "name": "catrwall-apollo-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.2.5",
+    "express": "^4.16.4",
+    "graphql": "^14.0.2",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.1.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.1"
+  }
+}
