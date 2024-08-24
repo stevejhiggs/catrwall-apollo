@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 import FlipMove from 'react-flip-move';
 import './styles.scss';
 
@@ -14,7 +14,7 @@ export interface IProps {
 }
 
 // as this component does not have state or actions it can be written as a pure function
-const CatGrid: React.SFC<IProps> = (props) => {
+const CatGrid: React.FC<IProps> = (props) => {
   const { kittys, onKittyClick } = props;
 
   if (!kittys.length) {
@@ -29,6 +29,9 @@ const CatGrid: React.SFC<IProps> = (props) => {
           className={`kitty num${index}`}
           key={kitty.id}
           onClick={() => onKittyClick(kitty.id)}
+          onKeyDown={(e) => e.key === 'Enter' && onKittyClick(kitty.id)}
+          role="button"
+          tabIndex={0}
         >
           <img src={kitty.imageUrl} alt="cat" />
           <h3 className="score">{kitty.votes}</h3>

@@ -1,6 +1,6 @@
 import { Mutation, Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import React from 'react';
+import type React from 'react';
 import './styles.scss';
 import CatGrid from '../CatGrid/component';
 
@@ -24,7 +24,7 @@ const VOTE_CAT = gql`
   }
 `;
 
-const App: React.SFC = () =>
+const App: React.FC = () =>
   <Query query={GET_CATS} pollInterval={500}>
     {({ loading, error, data }) => {
       if (loading) return <p>Loading...</p>;

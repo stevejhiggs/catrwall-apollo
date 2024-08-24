@@ -1,4 +1,4 @@
-FROM node:10-alpine as builder
+FROM node:20-alpine as builder
 
 RUN mkdir -p /usr/src/buildoutput
 WORKDIR /usr/src/buildoutput
@@ -7,7 +7,7 @@ COPY . /usr/src/buildoutput
 RUN yarn
 RUN yarn build
 
-FROM node:10-alpine
+FROM node:20-alpine
 RUN yarn global add serve
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app

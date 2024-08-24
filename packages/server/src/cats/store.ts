@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 import { v4 } from 'uuid';
 
 export interface IKitty {
@@ -20,7 +19,7 @@ const setCats = (newCats: IKitty[]) => {
 }
 
 export const refreshCats = async () => {
-  const response = await fetch(`http://thecatapi.com/api/images/get?size=large&type=gif&results_per_page=10&format=html`)
+  const response = await fetch('http://thecatapi.com/api/images/get?size=large&type=gif&results_per_page=10&format=html')
   if (!response.ok) {
     console.log('argh!');
     return;
@@ -29,8 +28,12 @@ export const refreshCats = async () => {
   const responseBody: string = await response.text();
 
   const srcs: string[] = [];
-  let match;
-  while ( ( match = srcRegex.exec( responseBody ) ) && srcs.push( match[1] ) ) {};
+  let match: RegExpExecArray | null;
+  while (true) {
+    match = srcRegex.exec(responseBody);
+    if (match === null) break;
+    srcs.push(match[1]);
+  }
 
   setCats(srcs.map((src) => {
     return {

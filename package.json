@@ -1,0 +1,15 @@
+{
+  "name": "catrwall-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "real time collaborative cat voting with graphql",
+  "scripts": {
+    "start": "pnpm run -r start",
+    "build": "pnpm run -r build"
+  },
+  "author": "Steve Higgs",
+  "license": "ISC",
+  "devDependencies": {
+  },
+  "packageManager": "pnpm@9.8.0"
+}

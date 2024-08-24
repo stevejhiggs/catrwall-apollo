@@ -1,0 +1,27 @@
+{
+  "name": "catrwall-apollo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-boost": "^0.4.9",
+    "express": "^4.19.2",
+    "graphql": "^16.9.0",
+    "react": "^18.3.1",
+    "react-apollo": "^3.1.5",
+    "react-dom": "^18.3.1",
+    "react-flip-move": "^3.0.5",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.5.0",
+    "@types/react": "18.3.4",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "sass": "^1.77.8",
+    "typescript": "catalog:",
+    "vite": "^5.4.2"
+  },
+  "scripts": {
+    "start": "vite"
+  }
+}
