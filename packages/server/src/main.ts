@@ -1,5 +1,5 @@
 import { ApolloServer, gql } from 'apollo-server';
-import * as catStore from './cats/store';
+import * as catStore from './cats/store.js';
 
 catStore.refreshCats();
 

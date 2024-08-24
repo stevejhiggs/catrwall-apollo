@@ -2,6 +2,7 @@
   "name": "catrwall-apollo-server",
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "start": "node --import tsx src/main.ts"
   },
